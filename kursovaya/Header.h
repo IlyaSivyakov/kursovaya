@@ -33,7 +33,7 @@ void func() {
 		SetConsoleOutputCP(1251);
 		Profile* StudentInfo = 0;
 		int StudentAmount;
-		cout << "Ââåäèòå êîë-âî ñòóäåíòîâ ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² ";
 		cin >> StudentAmount;
 		cout << std::endl;
 		int s;
@@ -41,16 +41,16 @@ void func() {
 		cout << s;
 		Profile* arr = new Profile[StudentAmount];
 		for (int i = 0; i < StudentAmount; i++) {
-			cout << "Id ñòóäåíòà: ";
+			cout << "Id ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 			cin >> arr[i].id;
-			cout << "ÔÈÎ: ";
+			cout << "Ð¤Ð˜Ðž: ";
 			cin.getline(arr[i].FIO, 100, '\n');
 			cin.getline(arr[i].FIO, 100, '\n');
-			cout << "Ïîë ñòóäåíòà: ";
+			cout << "ÐŸÐ¾Ð» ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 			cin.getline(arr[i].gender, 2, '\n');
-			cout << "Íîìåð ãðóïïû: ";
+			cout << "ÐÐ¾Ð¼ÐµÑ€ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹: ";
 			cin >> arr[i].group;
-			cout << "Îöåíêè çà ýêçàìåí è äèô.çà÷åòû: ";
+			cout << "ÐžÑ†ÐµÐ½ÐºÐ¸ Ð·Ð° ÑÐºÐ·Ð°Ð¼ÐµÐ½ Ð¸ Ð´Ð¸Ñ„.Ð·Ð°Ñ‡ÐµÑ‚Ñ‹: ";
 			cin >> arr[i].exam1;
 			cin >> arr[i].exam2;
 			cin >> arr[i].exam3;
@@ -59,23 +59,23 @@ void func() {
 			cin >> arr[i].test3;
 			cin >> arr[i].test4;
 			cin >> arr[i].test5;
-			cout << "Ôîðìà îáó÷åíèÿ: ";
+			cout << "Ð¤Ð¾Ñ€Ð¼Ð° Ð¾Ð±ÑƒÑ‡ÐµÐ½Ð¸Ñ: ";
 			cin.getline(arr[i].depart, 20, '\n');
 			cin.getline(arr[i].depart, 20, '\n');
 			cout << endl;
 		}
-		cout << "Âûâîä äàííûõ îáî âñåõ ñòóäåíòàõ " << endl;
-		cout << "¹\t " << "Id\t " << "ÔÈÎ\t " << "Ïîë\t" << "Ãðóïïà\t" << "Îöåíêè çà ýêçàìåíû è äèô.çà÷åòû\t" << "Ôîðìà îáó÷åíèÿ\t" << endl;
+		cout << "Ð’Ñ‹Ð²Ð¾Ð´ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð¾Ð±Ð¾ Ð²ÑÐµÑ… ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°Ñ… " << endl;
+		cout << "â„–\t " << "Id\t " << "Ð¤Ð˜Ðž\t " << "ÐŸÐ¾Ð»\t" << "Ð“Ñ€ÑƒÐ¿Ð¿Ð°\t" << "ÐžÑ†ÐµÐ½ÐºÐ¸ Ð·Ð° ÑÐºÐ·Ð°Ð¼ÐµÐ½Ñ‹ Ð¸ Ð´Ð¸Ñ„.Ð·Ð°Ñ‡ÐµÑ‚Ñ‹\t" << "Ð¤Ð¾Ñ€Ð¼Ð° Ð¾Ð±ÑƒÑ‡ÐµÐ½Ð¸Ñ\t" << endl;
 		for (int i = 0; i < StudentAmount; ++i)
 		{
 			cout << arr[i].id << '\t' << arr[i].FIO << '\t' << arr[i].gender << '\t' << arr[i].group << '\t' << arr[i].exam1 << arr[i].exam2 << arr[i].exam3 << " " << arr[i].test1 << arr[i].test2 << arr[i].test3 << arr[i].test4 << arr[i].test5 << '\t' << arr[i].depart << endl;
 		}
-		cout << "Ïðîñìîòðåòü äàííûå ïî íîìåðó ãðóïïû ñòóäåíòà? (1-äà, 0-íåò) ";
+		cout << "ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ÐµÑ‚ÑŒ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¿Ð¾ Ð½Ð¾Ð¼ÐµÑ€Ñƒ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°? (1-Ð´Ð°, 0-Ð½ÐµÑ‚) ";
 		int yon;
 		cin >> yon;
 		if (yon == 1) {
 			int N;
-			cout << "Ââåäèòå íîìåð ãðóïïû ñòóäåíòîâ, êîòîðûõ õîòèòå ïðîñìîòðåòü " << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð², ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ñ… Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ÐµÑ‚ÑŒ " << endl;
 			cin >> N;
 			for (int i = 0; i < StudentAmount; i++)
 			{
@@ -87,30 +87,30 @@ void func() {
 		else
 		{
 		}
-		cout << "Ïðîñìîòðåòü êîëè÷åñòâî ñòóäåíòîâ ìóæñêîãî èëè æåíñêîãî ïîëà? (1-äà, 0-íåò) ";
+		cout << "ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ÐµÑ‚ÑŒ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð¼ÑƒÐ¶ÑÐºÐ¾Ð³Ð¾ Ð¸Ð»Ð¸ Ð¶ÐµÐ½ÑÐºÐ¾Ð³Ð¾ Ð¿Ð¾Ð»Ð°? (1-Ð´Ð°, 0-Ð½ÐµÑ‚) ";
 		cin >> yon;
 		if (yon == 1) {
 			int c1 = 0, c2 = 0;
 			for (int i = 0; i < StudentAmount; i++)
 			{
-				if (int(arr[i].gender[0]) == -52 || arr[i].gender == "Ì")
+				if (int(arr[i].gender[0]) == -52 || arr[i].gender == "Ðœ")
 				{
 					c1++;
 				}
-				if (int(arr[i].gender[0]) == -58 || arr[i].gender == "Æ")
+				if (int(arr[i].gender[0]) == -58 || arr[i].gender == "Ð–")
 				{
 					c2++;
 				}
 			}
-			cout << "Ñòóäåíòîâ ìóæñêîãî ïîëà: " << c1 << "\tÑòóäåíòîâ æåíñêîãî ïîëà: " << c2 << endl;
+			cout << "Ð¡Ñ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð¼ÑƒÐ¶ÑÐºÐ¾Ð³Ð¾ Ð¿Ð¾Ð»Ð°: " << c1 << "\tÐ¡Ñ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð¶ÐµÐ½ÑÐºÐ¾Ð³Ð¾ Ð¿Ð¾Ð»Ð°: " << c2 << endl;
 		}
 		else {
 		}
-		cout << "Ïðîñìîòðåòü äàííûå ïî id ñòóäåíòà? (1-äà, 0-íåò) ";
+		cout << "ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ÐµÑ‚ÑŒ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¿Ð¾ id ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°? (1-Ð´Ð°, 0-Ð½ÐµÑ‚) ";
 		cin >> yon;
 		if (yon == 1) {
 			int N;
-			cout << "Ââåäèòå id ñòóäåíòà, êîòîðîãî õîòèòå ïðîñìîòðåòü " << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ id ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°, ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ÐµÑ‚ÑŒ " << endl;
 			cin >> N;
 			for (int i = 0; i < StudentAmount; i++)
 			{
@@ -123,24 +123,24 @@ void func() {
 		}
 		else {
 		}
-		cout << "Èçìåíèòü äàííûå ñòóäåíòà? (1-äà, 0-íåò) ";
+		cout << "Ð˜Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ Ð´Ð°Ð½Ð½Ñ‹Ðµ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°? (1-Ð´Ð°, 0-Ð½ÐµÑ‚) ";
 		cin >> yon;
 		if (yon == 1) {
 			int k;
-			cout << "Ââåäèòå id ñòóäåíòà êîòîðîãî õîòèòå èçìåíèòü ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ id ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ ";
 			cin >> k;
 			for (int i = 0; i < StudentAmount; i++) {
 				if (arr[i].id == k) {
-					cout << "Id ñòóäåíòà: ";
+					cout << "Id ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 					cin >> arr[i].id;
-					cout << "ÔÈÎ: ";
+					cout << "Ð¤Ð˜Ðž: ";
 					cin.getline(arr[i].FIO, 100, '\n');
 					cin.getline(arr[i].FIO, 100, '\n');
-					cout << "Ïîë ñòóäåíòà: ";
+					cout << "ÐŸÐ¾Ð» ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 					cin.getline(arr[i].gender, 2, '\n');
-					cout << "Íîìåð ãðóïïû: ";
+					cout << "ÐÐ¾Ð¼ÐµÑ€ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹: ";
 					cin >> arr[i].group;
-					cout << "Îöåíêè çà ýêçàìåí è äèô.çà÷åòû: ";
+					cout << "ÐžÑ†ÐµÐ½ÐºÐ¸ Ð·Ð° ÑÐºÐ·Ð°Ð¼ÐµÐ½ Ð¸ Ð´Ð¸Ñ„.Ð·Ð°Ñ‡ÐµÑ‚Ñ‹: ";
 					cin >> arr[i].exam1;
 					cin >> arr[i].exam2;
 					cin >> arr[i].exam3;
@@ -149,17 +149,17 @@ void func() {
 					cin >> arr[i].test3;
 					cin >> arr[i].test4;
 					cin >> arr[i].test5;
-					cout << "Ôîðìà îáó÷åíèÿ: ";
+					cout << "Ð¤Ð¾Ñ€Ð¼Ð° Ð¾Ð±ÑƒÑ‡ÐµÐ½Ð¸Ñ: ";
 					cin.getline(arr[i].depart, 20, '\n');
 					cin.getline(arr[i].depart, 20, '\n');
 					cout << endl;
 				}
 			}
 		}
-		cout << "Âûâåñòè äàííûå î ñòóäåíòàõ, êîòîðûå íå ïîëó÷àþò ñòèïåíäèþ, ó÷àòñÿ òîëüêî íà «õîðîøî» è «îòëè÷íî», ó÷àòñÿ òîëüêî íà «îòëè÷íî»? (1-äà, 0-íåò) ";
+		cout << "Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°Ñ…, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ð½Ðµ Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÑŽÑ‚ ÑÑ‚Ð¸Ð¿ÐµÐ½Ð´Ð¸ÑŽ, ÑƒÑ‡Ð°Ñ‚ÑÑ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð½Ð° Â«Ñ…Ð¾Ñ€Ð¾ÑˆÐ¾Â» Ð¸ Â«Ð¾Ñ‚Ð»Ð¸Ñ‡Ð½Ð¾Â», ÑƒÑ‡Ð°Ñ‚ÑÑ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð½Ð° Â«Ð¾Ñ‚Ð»Ð¸Ñ‡Ð½Ð¾Â»? (1-Ð´Ð°, 0-Ð½ÐµÑ‚) ";
 		cin >> yon;
 		if (yon == 1) {
-			cout << "Íå ïîëó÷àþò ñòèïåíäèþ" << endl << endl;
+			cout << "ÐÐµ Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÑŽÑ‚ ÑÑ‚Ð¸Ð¿ÐµÐ½Ð´Ð¸ÑŽ" << endl << endl;
 			for (int i = 0; i < StudentAmount; i++)
 			{
 				if (arr[i].exam1 < 4 || arr[i].exam2 < 4 || arr[i].exam3 < 4 || arr[i].test1 < 4 || arr[i].test2 < 4 || arr[i].test3 < 4 || arr[i].test4 < 4 || arr[i].test5 < 4)
@@ -169,7 +169,7 @@ void func() {
 					}
 				}
 			}
-			cout << "Ó÷àòñÿ íà õîðîøî è îòëè÷íî" << endl << endl;
+			cout << "Ð£Ñ‡Ð°Ñ‚ÑÑ Ð½Ð° Ñ…Ð¾Ñ€Ð¾ÑˆÐ¾ Ð¸ Ð¾Ñ‚Ð»Ð¸Ñ‡Ð½Ð¾" << endl << endl;
 			for (int i = 0; i < StudentAmount; i++)
 			{
 				if (arr[i].exam1 > 3 && arr[i].exam2 > 3 && arr[i].exam3 > 3 && arr[i].test1 > 3 && arr[i].test2 > 3 && arr[i].test3 > 3 && arr[i].test4 > 3 && arr[i].test5 > 3)
@@ -177,7 +177,7 @@ void func() {
 					cout << i + 1 << '\t' << arr[i].FIO << '\t' << arr[i].gender << '\t' << arr[i].group << '\t' << arr[i].exam1 << arr[i].exam2 << arr[i].exam3 << arr[i].test1 << arr[i].test2 << arr[i].test3 << arr[i].test4 << arr[i].test5 << '\t' << arr[i].depart << endl;
 				}
 			}
-			cout << "Ïîëó÷àþò ñòèïåíäèþ" << endl << endl;
+			cout << "ÐŸÐ¾Ð»ÑƒÑ‡Ð°ÑŽÑ‚ ÑÑ‚Ð¸Ð¿ÐµÐ½Ð´Ð¸ÑŽ" << endl << endl;
 			for (int i = 0; i < StudentAmount; i++)
 			{
 				if (arr[i].exam1 == 5 && arr[i].exam2 == 5 && arr[i].exam3 == 5 && arr[i].test1 == 5 && arr[i].test2 == 5 && arr[i].test3 == 5 && arr[i].test4 == 5 && arr[i].test5 == 5)
@@ -186,7 +186,7 @@ void func() {
 				}
 			}
 		}
-		cout << "Âûâåñòè òîï ñòóäåíòîâ? (1-äà, 0-íåò) ";
+		cout << "Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ñ‚Ð¾Ð¿ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð²? (1-Ð´Ð°, 0-Ð½ÐµÑ‚) ";
 		cin >> yon;
 		if (yon == 1) {
 			for (int i = 0; i < StudentAmount; i++)
@@ -199,7 +199,7 @@ void func() {
 					}
 				}
 			}
-			cout << "¹\t" << "ÔÈÎ\t" << '\t' << '\t' << '\t' << "Ïîë\t" << "Ãðóïïà\t" << "Íîìåð\t" << "1 ýêç\t" << "2 ýêç\t" << "3 ýêç\t" << "1 çà÷.\t" << "2 çà÷.\t" << "3 çà÷.\t" << "4 çà÷.\t" << "5 çà÷.\t" << endl;
+			cout << "â„–\t" << "Ð¤Ð˜Ðž\t" << '\t' << '\t' << '\t' << "ÐŸÐ¾Ð»\t" << "Ð“Ñ€ÑƒÐ¿Ð¿Ð°\t" << "ÐÐ¾Ð¼ÐµÑ€\t" << "1 ÑÐºÐ·\t" << "2 ÑÐºÐ·\t" << "3 ÑÐºÐ·\t" << "1 Ð·Ð°Ñ‡.\t" << "2 Ð·Ð°Ñ‡.\t" << "3 Ð·Ð°Ñ‡.\t" << "4 Ð·Ð°Ñ‡.\t" << "5 Ð·Ð°Ñ‡.\t" << endl;
 			for (int i = 0; i < StudentAmount; i++)
 			{
 				cout << arr[i].id << '\t' << arr[i].FIO << '\t' << arr[i].gender << '\t' << arr[i].group << '\t' << arr[i].exam1 << arr[i].exam2 << arr[i].exam3 << " " << arr[i].test1 << arr[i].test2 << arr[i].test3 << arr[i].test4 << arr[i].test5 << '\t' << arr[i].depart << endl;
