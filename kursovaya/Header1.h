@@ -33,16 +33,16 @@ void AddList1(int value, int position)
         node->next = p;
         p->prev = node;
     }
-    cout << "\nÝëåìåíò äîáàâëåí...\n" << endl;
+    cout << "\nÐ­Ð»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½...\n" << endl;
     clock_t end = clock();
     double seconds = (double)(end - start) / CLOCKS_PER_SEC;
-    cout << "Âðåìÿ äîáàëâåíèÿ ýëåìåíòîâ " << seconds << endl;
+    cout << "Ð’Ñ€ÐµÐ¼Ñ Ð´Ð¾Ð±Ð°Ð»Ð²ÐµÐ½Ð¸Ñ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² " << seconds << endl;
 }
 
 int DeleteList1(int position)
 {
     clock_t start = clock();
-    if (head == NULL) { cout << "\nÑïèñîê ïóñò\n\n"; return 0; }
+    if (head == NULL) { cout << "\nÐ¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚\n\n"; return 0; }
     if (head == head->next)
     {
         delete head;
@@ -59,10 +59,10 @@ int DeleteList1(int position)
         a->next->prev = a->prev;
         delete a;
     }
-    cout << "\nÝëåìåíò óäàëåí...\n\n" << endl;
+    cout << "\nÐ­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»ÐµÐ½...\n\n" << endl;
     clock_t end = clock();
     double seconds = (double)(end - start) / CLOCKS_PER_SEC;
-    cout << "Âðåìÿ óäàëåíèÿ ýëåìåíòà " << seconds << endl;
+    cout << "Ð’Ñ€ÐµÐ¼Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° " << seconds << endl;
 }
 
 void CountList1()
@@ -84,11 +84,11 @@ void CountList1()
 void PrintList1()
 {
     clock_t start = clock();
-    if (head == NULL) cout << "\nÑïèñîê ïóñò\n\n";
+    if (head == NULL) cout << "\nÐ¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚\n\n";
     else
     {
         list* a = head;
-        cout << "\nÝëåìåíò: ";
+        cout << "\nÐ­Ð»ÐµÐ¼ÐµÐ½Ñ‚: ";
         do
         {
             cout << a->data << " ";
@@ -97,7 +97,7 @@ void PrintList1()
     }
     clock_t end = clock();
     double seconds = (double)(end - start) / CLOCKS_PER_SEC;
-    cout << endl << "Âðåìÿ ïîëó÷åíèÿ ýëåìåíòîâ " << seconds << endl;
+    cout << endl << "Ð’Ñ€ÐµÐ¼Ñ Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ñ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² " << seconds << endl;
 }
 
 int prog1()
@@ -106,27 +106,27 @@ int prog1()
     int value, position, x;
     do
     {
-        cout << "1. Äîáàâèòü ýëåìåíò" << endl;
-        cout << "2. Óäàëèòü ýëåìåíò" << endl;
-        cout << "3. Âûâåñòè ñïèñîê" << endl;
-        cout << "4. Âûâåñòè ðàçìåðíîñòü ñïèñêà" << endl;
-        cout << "5. Îáìåíÿòü ýëåìåíòû ñïèñêà" << endl;
-        cout << "0. Âûéòè" << endl;
-        cout << "\nÍîìåð îïåðàöèè > "; cin >> x;
+        cout << "1. Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚" << endl;
+        cout << "2. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚" << endl;
+        cout << "3. Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ ÑÐ¿Ð¸ÑÐ¾Ðº" << endl;
+        cout << "4. Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ñ€Ð°Ð·Ð¼ÐµÑ€Ð½Ð¾ÑÑ‚ÑŒ ÑÐ¿Ð¸ÑÐºÐ°" << endl;
+        cout << "5. ÐžÐ±Ð¼ÐµÐ½ÑÑ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ ÑÐ¿Ð¸ÑÐºÐ°" << endl;
+        cout << "0. Ð’Ñ‹Ð¹Ñ‚Ð¸" << endl;
+        cout << "\nÐÐ¾Ð¼ÐµÑ€ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¸ > "; cin >> x;
         switch (x)
         {
         case 1:
-            cout << "Çíà÷åíèå > "; cin >> value;
-            cout << "Ïîçèöèÿ > "; cin >> position;
+            cout << "Ð—Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ > "; cin >> value;
+            cout << "ÐŸÐ¾Ð·Ð¸Ñ†Ð¸Ñ > "; cin >> position;
             AddList1(value, position);
             break;
         case 2:
-            cout << "Ïîçèöèÿ > "; cin >> position;
+            cout << "ÐŸÐ¾Ð·Ð¸Ñ†Ð¸Ñ > "; cin >> position;
             DeleteList1(position); break;
         case 3:
             PrintList1(); break;
         case 4:
-            cout << "Ðàçìåðíîñòü ñïèñêà > ";
+            cout << "Ð Ð°Ð·Ð¼ÐµÑ€Ð½Ð¾ÑÑ‚ÑŒ ÑÐ¿Ð¸ÑÐºÐ° > ";
             CountList1(); break;
         }
     } while (x != 0);
