@@ -45,7 +45,7 @@ int prog2() {
 	char a;
 	char In[81], Out[81];
 	int k = 0, l = 0;
-	cout << "Ââåäèòå ôîðìóëó: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð¾Ñ€Ð¼ÑƒÐ»Ñƒ: ";
 	cin >> In;
 	while (In[k] != '\0') {
 		if (In[k] >= 'a' && In[k] <= 'z') {
@@ -83,14 +83,14 @@ int prog2() {
 		l++;
 	}
 	Out[l] = '\0';
-	cout << "\n Ïîëüñêàÿ = " << Out << endl;
-	cout << "Ðåçóëüòàò = " << fixed << setprecision(2) << Result(Out) << endl;
+	cout << "\n ÐŸÐ¾Ð»ÑŒÑÐºÐ°Ñ = " << Out << endl;
+	cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ = " << fixed << setprecision(2) << Result(Out) << endl;
 }
 double Result(char* str) {
 	int i;
 	char ss, ss1, ss2, ssR = 'z' + 1;
 	double op1, op2, res = 0, mas[200];
-	cout << "Âõîäíûå äàííûå: " << endl;
+	cout << "Ð’Ñ…Ð¾Ð´Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ: " << endl;
 	for (i = 0; str[i] != '\0'; ++i) {
 		ss = str[i];
 		if (ss >= 'a' && ss <= 'z') {
